@@ -1,13 +1,61 @@
 # Curso Definito de HTML y CSS
 
-### Responsive desing: medias queries
+### Responsive desing: mostly fluid
 
-Responsive desing es una buena practica para que nuestra paginas se eslaen y se vean bien para cualquier dispositivo.para usarlo debemos saber que es una **media querie** y un ***Break point.***
+Asi es como deberiamos implementar el mostly fluid en nuestros proyectos.
 
-Nuestros proyectos deben ser pensados primero en **Mobile First** ó **Mobile Only** y la mejor practica de trabajarlo es hacer un archivo .css que referencie los estilos para cada uno de los tamaños que necesitemos; y linkearlos a nuestro HTML en el orden de mobile a desktop.
-
+index.html
 ```HTML
-<Link href="style.css" rel="stylesheet"> <!--Tus estilos para enforcados a mobile firts-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mostly Fluid</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="tablet.css" media="screen and (min-width:600px)">
+	<link rel="stylesheet" href="desktop.css" media="screen and (min-width:800px)">
+</head>
+<body>
+	<main class="container">
+		<div class="c1"></div>
+		<div class="c2"></div>
+		<div class="c3"></div>
+		<div class="c4"></div>
+		<div class="c5"></div>
+	</main>
+</body>
+</html>
+```
 
-<Link href="tablet.css" rel="stylesheet" media="screen and (min-width: 768px)"> <!--Tus estilos para enforcados a tammanis minimos de 768-->
+tablet.css
+```CSS
+.c2, .c3, .c4{
+	width: 50%;
+}
+```
+
+desktop.css
+```css
+.container {
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.c1{
+	width: 60%;
+}
+
+.c2 {
+	width: 40%;
+}
+
+.c3, .c4{
+	width: 33%;
+}
+
+.c5{
+	width: 34%;
+}
 ```
