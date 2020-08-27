@@ -1,21 +1,41 @@
 # Curso Definito de HTML y CSS
 
-### Responsive design: Buenas prácticas y ejemplos de responsive
+### Responsive design: Imágenes responsive
 
-Esta es son recomendaciones para responsive desing
+Esta es la mejor tecnica para trabajar imagenes responsive.
 
-1. Separa siempre tus archivos de CSS por break point
 
-- mobile.css / style.css
-- tablet.css
-- desktop.css
+Index.html
+```HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main>
+		<picture>
+			<source media="(min-width:1300px)" srcset="./images/large.jpg">
+			<source media="(min-width:1000px)" srcset="./images/medium.jpg">
+			<img src="./images/small.jpg" alt="Es una imagen de ejemplo" />
+		</picture>
+	</main>
+</body>
+</html>
+```
 
-2. Para saber cuales son los breakpoints promedio que debo de usar podria mirar esta pagina **[mydevice.io.](https://www.mydevice.io/ "mydevice.io.")** Por lo menos usa tres breakpoiints.
+./style.css
+```CSS
+img {
+	width: 100%;  /*Es tu mejor amigo*/
+}
+```
 
-Algunas paginas usan algumos ejemplos de patrones de diseño
- ya vistos en las clases pasadas.
+**Nota:** Recuerda siempre poner la etiqueta source con mayor min-width por encima de la etiqueta source con menor min-width.
 
-- **DROPBOX:** mostly fluid
-- **GitHub:** layout shifter
-- **[smashingmagazine:](https://www.smashingmagazine.com/ "smashingmagazine:")** grid layout
-- **Dribble:** grid layout
+Todas las etiquetas source y img deben estar dentro de la etiqueta picture.
+
+El width de las imagenes siempre estaran al 100%.
