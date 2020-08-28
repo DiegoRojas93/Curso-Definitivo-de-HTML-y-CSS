@@ -1,3 +1,5 @@
-h2 ~ p {           /*aplicales los siguentes estilos todas las etiquetas p que sean hermanos generales de despues de encontrar la etiqueta h2*/
+div > p { /*si la etiqueta p esta adentro de una etiqueta div aplicale los sigiente estilos*/
+
 	color: red;
+
 }
