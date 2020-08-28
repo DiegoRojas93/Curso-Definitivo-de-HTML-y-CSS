@@ -1,4 +1,4 @@
-div > p { /*si la etiqueta p esta adentro de una etiqueta div aplicale los sigiente estilos*/
+div p { /*si la etiqueta p esta adentro de una etiqueta div aplicale los sigiente estilos*/
 
 	color: red;
 
