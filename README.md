@@ -1,46 +1,35 @@
 # Curso Definito de HTML y CSS
 
-### CSS: Pseudo clases y pseudo elementos
+### Especificidad en los selectores
 
-**[Pseudoclases:](https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes "Pseudoclases:")** Definen el estilo de un estado especial de un elemento.
+¿como se controla el orden al declarar css?
 
+hay tres maneras de declarar la especificidad de css
 
-**[Pseudoelementos:](https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos "Pseudoelementos:")** Define el estilo de *una parte* especifica de un elemento.
+- **importancia:** La importancia es uno de los conceptops más... pues... importantes.
 
-```CSS
-.main-nav{
-	margin-top: 10px;
-	list-style: none;
-	padding-left: 0;
-	background-color: #13a4a4;
-}
+si dos declaraciones tienen la misma importancia, la especificidad de las reglas decidirá cuál se debe aplicar. Si las reglas tienen la misma especificidad, el orden de las fuentes controla el resultado final.
 
-.main-nav__item {
-	display: inline-block;
-}
+los estilos se aplicaran segun su impotancia
 
-.main-nav__item a {
-	color: white;
-	padding: 5px;
-	border-radius: 2px;
-	text-decoration: none;
-}
+1. La hoja de estilo de agente de usuario (el naegador aplicara sus estilos a ciertas etiquetas)
 
-/* pseudoClases */
+2. Declaraciones normales en hojas de estilo de autor (Nuestros.css)
 
-.main-nav__item a:hover {
-	color: blue;
-}
+3. Declaraciones importantes en las hojas de estilos ( utilizan el ***!important***)
 
-.main-nav__item a:active {
-	color: red;
-}
+- **Especificidad:** los selectores de que implementamos en los archivos css tentran su rango de importancia; aqui enumeraremos su orden de importancia de mator a menor.
 
-/* pseudoElemento */
+1. !important
 
-.main-nav__item a::after{ /* Despues del elemento agregale este contenido*/
+2. inline style (los estylos que se aplican en la etiqueta style del archivo .HTML ó en las etiquetas hijas del body)
 
-	content: " | ";
-}
+3. #id
 
-```
+4. .class
+
+5. etiquetas (etiquetas de html llamadas en el archivo .css)
+
+- **Orden de las fuentes**: En nuestros estilos, las declaraciones al final del documento anularan a las que sucedan antes en caso de un conflicto.
+
+**Nota:** *cascade* es el algoritmo de css que toma para aplicar los estilos.
