@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Select</title>
+</head>
+<body>
+	<main>
+
+		<!-- No es la mejor practica -->
+
+		<!-- <select name="Cursos" id="">
+			<option value="JavaScript">JavaScript</option>
+			<option value="HTML:5">HTML:5</option>
+			<option value="CSS3">CSS3</option>
+			<option value="Web Standars">Web Standars</option>
+		</select> -->
+
+		<!-- Mejor practica: debido a que al usuario puede buscar su item sin hacer scroll (muy util para mobile first) y ademas captura el dato que el usuario ingrese si no esta la opcion que este predetermina por el navegador-->
+
+		<input list="cursos">
+		<datalist id="cursos">
+			<option value="JavaScript">lenguaje</option>
+			<option value="HTML:5">no es lenguaje</option>
+			<option value="CSS3">no es lenguaje</option>
+			<option value="Web Standars"></option>
+		</datalist>
+
+	</main>
+</body>
+</html>
