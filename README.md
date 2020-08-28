@@ -1,8 +1,10 @@
 # Curso Definito de HTML y CSS
 
-### Formularios: Select
+### Formularios: Input type submit vs. Button tag
 
-Podemos usar la etiqueta **datalist** y a etiqueta **option** para permitir que el usuario selecione una lista de opciones que pueda elejir.
+Dememos usar el **Input type submit** para poder enviar los datos de un formulario (este input debe estar como hijo dentro de  la etiquete form).
+
+Debemos usar la etiqueta **Button** para otas cosas, el cual podemos personalizarlo seleccionando el tipo de boton por medio del su atripbuto ***Type***
 
 ```HTML
 <!DOCTYPE html>
@@ -10,24 +12,22 @@ Podemos usar la etiqueta **datalist** y a etiqueta **option** para permitir que 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Select</title>
+	<title>Document</title>
 </head>
 <body>
-	<main>
+	<input type="submit">
 
-		<input list="cursos"> <!--Permite visualizar el item de lista-->
+	<button>Enviar</button>
 
-		<datalist id="cursos"> <!--nombre de la lista-->
+	<br>
+	<br>
+	<br>
 
-			<option value="JavaScript">lenguaje</option> <!-- value muestra la opcion a escoger y su contenido mustra el detalle de esta opción-->
+	<input type="submit" value="Enviar">
 
-			<option value="HTML:5">no es lenguaje</option>
-			<option value="CSS3">no es lenguaje</option>
-			<option value="Web Standars"></option>
-		</datalist>
-
-	</main>
+	<button type="submit">Enviar datos</button>
 </body>
 </html>
 ```
-Esta es la mejor practica, debido a que al usuario puede buscar su item sin hacer scroll (muy util para mobile first) y ademas captura el dato que el usuario ingrese si no esta la opcion que este predetermina por el navegador
+
+**Nota:** *submit* significa enviar, si elegimos submit en un input o boton significa esta dos etiquetas enviaran datos.
