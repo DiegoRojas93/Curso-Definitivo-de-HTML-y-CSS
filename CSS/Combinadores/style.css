@@ -1,0 +1,3 @@
+h2 + p {           /*todas las etiquetas p que esten seguidas de un h2 aplicale su estilo*/
+	color: red;
+}
