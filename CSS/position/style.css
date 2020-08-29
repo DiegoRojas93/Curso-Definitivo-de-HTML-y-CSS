@@ -4,19 +4,33 @@
 	padding: 0;
 }
 
-.parent{
-	border: 2px dotted black;
-	display: inline-block;
+
+body {
+	background-color: lavender;
 }
 
-.box {
-	display: inline-block;
+main {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+}
+
+section{
+	margin: auto;
+	display: flex;
+	background-color: violet;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+	min-height: 500px;
+	text-align: center;
+	border-radius: 20px;
+}
+
+article{
+	width: 300px;
 	background-color: red;
-	width: 100px;
-	height: 100px;
-}
-
-#two {
-	background-color: green;
-	position: static; /*static, absolute, relative*/
+	position: absolute;
+	bottom: 550px;
+	border-radius: 20px;
 }
