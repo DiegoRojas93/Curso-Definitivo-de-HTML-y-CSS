@@ -1,0 +1,20 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+main {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(128, 128, 247);
+}
+
+section {
+	width: 80%;					/*width base: que siempre este en porcentaje*/
+	min-width: 320px;		/*ancho minimo alcanzable: siempre en px*/
+	max-width: 500px;		/*ancho maximo alcanzable: siempre en px*/
+	min-height: 500px;
+	margin: 0 auto;
+	background-color: lavender;
+}
