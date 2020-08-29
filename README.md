@@ -1,11 +1,12 @@
 # Curso Definito de HTML y CSS
 
-### Position
+### Display
 
-La propiedad **position** tinen 5 propiedades:
+Display es una propiedad cuyos valores son:
 
-- ***static***: por default
+- **Block**: toma todo el ancho disponible sin tener en cuanta su contenido. Las siguentes etiquetas utilizan  block en su display div, p, ul.
+- **inline**: toma todo el ancho que ocupe su contenido. Por defecto no tienen margin o padding en su top y en su bottom, e se pueden usar el left y el right del margin ó padding, no pueden agregarse un width o un height.
 
-- ***absolute***: pierde su posicion y se pone por encima de los demas elementos, *los demas elementos se acomodan para quitar el espacio faltante.*
+- **list-item:** usados para las etiquetas item;
 
-- ***relative***: no pierde su posicion pero no puede ser manipulado a voluntad por medio de bottom, top, right y left;
+- **inline-block:** se comporta como un display inline, pero puede agregarle padding y margin en su top y en su bottom, ademas se le puede manipular el width o un height.
