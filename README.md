@@ -1,12 +1,23 @@
 # Curso Definito de HTML y CSS
 
-### Display
+### Display:flex
 
-Display es una propiedad cuyos valores son:
+Display flex es una propiedad para tener layout mas dinamicas.
 
-- **Block**: toma todo el ancho disponible sin tener en cuanta su contenido. Las siguentes etiquetas utilizan  block en su display div, p, ul.
-- **inline**: toma todo el ancho que ocupe su contenido. Por defecto no tienen margin o padding en su top y en su bottom, e se pueden usar el left y el right del margin ó padding, no pueden agregarse un width o un height.
+Display flex nos permite tener mas carasteristicas bajo la manga:
 
-- **list-item:** usados para las etiquetas item;
+1. **flex-diraction:** esta propiedad indica como se van a acomodar los hijos. Debe ser aplicado en el contenedor padre.
+sus valores son:
 
-- **inline-block:** se comporta como un display inline, pero puede agregarle padding y margin en su top y en su bottom, ademas se le puede manipular el width o un height.
+- ***row***: es por default y muestra una fila de los items hijos
+- ***column***: muestra una columna de los items hijos
+- ***row-reverse***: muestra una fila de los items hijos pero estos estan al contrario.
+- ***column-reverse***: muestra una columna de los items hijos pero estos estan al contrario.
+
+2. **flex-wrap:** esta propiedad indica como se van a acomodar los hijos si estos no ven mas espacio en su contenedor, es decir que los items hijos caeran uno bajo el otro si no encuentran el espacio suficinete para que esten en su forma de horizontal. Debe ser aplicado en el contenedor padre y sus valores son:
+
+- ***nowrap:*** no se envolveran.
+- ***wrap:*** se envolveran (caeran uno bajo el otro).
+- ***wrap-reverse:*** se envolveran (caeran uno encima del otro).
+
+3. **justify-content:** alinea el contenido (los items hijos) de forma horizontal, sus valores son: center, space-between, space-around, space-evenly(el espacio es el mismo) flex-end,flex-start etc.
